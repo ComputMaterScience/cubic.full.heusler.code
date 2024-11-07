@@ -1,0 +1,4 @@
+Automatic Mesh # Generates Automatically the K-mesh
+  0
+Gamma # Automatic Distribution of the mesh
+  2 15 15

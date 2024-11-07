@@ -1,0 +1,38 @@
+   SYSTEM = OPT
+ Starting parameters for this run:
+   NWRITE =      2    write-flag
+   ISTART =      0    job   : 0-new, 1-cont, 2-samecut
+   ISPIN  =      2    spin-polarized or not: 
+Electronic Relaxation:
+   ENCUT  = 550        		# Kinetic Energy Cutoff in eV
+Parallelization Scheme
+   LPLANE = .TRUE.
+   NPAR   = 4
+
+SCF parameters
+   NELMDL =     6     number of delayed ELM steps
+   NELM   =     300   number of ELM steps
+   LREAL  =   .FALSE.   real-space projection (.FALSE., .TRUE., On, Auto)
+   ALGO   =   Fast 
+   ISMEAR =     -5     (-1-Fermi, 1-Methfessel/Paxton)
+   SIGMA  =     0.1   broadening in eV
+   ISIF   =     3     (1:force=y stress=trace only ions=y shape=n volume=n)
+   ADDGRID = .TRUE.
+Writting Options
+   LWAVE   = .FALSE.
+
+Ionic Relaxation:
+   NSW    =     0   max number of geometry steps
+   IBRION =     -1    ionic relax: 0-MD, 1-quasi-Newton, 2-CG, 3-Damped MD
+   EDIFFG =   -1e-4   force (eV/A) stopping-criterion for geometry steps
+   ISYM   =     2     (1-use symmetry, 0-no symmetry)
+   POTIM  =     0.4   initial time step for geo-opt (increase for soft sys)
+
+DOS related values:
+   LORBIT = 11
+   ICHARG =      2    charge: 0-wave, 1-file, 2-atom, >10-const
+   MAGMOM   = 2*3   
+   EDIFF    = 1.0E-7   # Stopping criteria for ESC
+   
+   #NBANDS = 18
+   #LWANNIER90   =  True

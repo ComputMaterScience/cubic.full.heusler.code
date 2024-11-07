@@ -1,0 +1,33 @@
+# SCF Job
+#===========================================
+
+# General Setup
+  System = OPT Job       	# Calculation Title
+  ENCUT  = 500       		# Kinetic Energy Cutoff in eV
+  ISTART = 0         	    # Job: 0-new  1-cont  2-samecut
+  ICHARG = 2               # initial charge density: 1-file 2-atom 10-cons 11-DOS
+  ISPIN  = 2
+  ISIF   = 3
+  PREC   = Accuracy
+  IBRION = -1
+  POTIM  = 0.1
+  MAGMOM = 1*-2.500000 1*2.500000 1*2.500000 1*0.000000
+  LORBIT = 11
+  LWAVE   = .FALSE.
+  ADDGRID = .TRUE.
+
+# Electronic Relaxation (SCF)
+  NSW    =     0
+  NELMDL =     -6      # Number of delayed ELM steps
+
+  NELM   =     300     # Number of ELM steps
+  EDIFF  =     1.0E-7  # Stopping criteria for ESC
+  EDIFFG =     1.0E-6
+  ALGO   =     Fast    # Electronic algorithm minimization
+  SIGMA  =     0.050000     # Broadening in eV
+  ISMEAR = 0           # Partial Occupancies for Each Orbital
+  NEDOS  = 3000
+# Parallelization Scheme
+  LPLANE = .TRUE.
+  NPAR   = 4
+
